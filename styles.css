@@ -1,124 +1,119 @@
-/* Universal Selector */
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Global Styles */
+/* Body Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-}
-
-/* Header Styling */
-header {
-    background-color: #2d3e50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Navigation Styles */
-nav ul {
-    list-style-type: none;
-    background-color: #333;
-    overflow: hidden;
-    text-align: center;
-    margin-top: 10px;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 14px 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-}
-
-nav ul li a:hover {
-    background-color: #1a232a;
-    transition: background-color 0.3s ease;
-}
-
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 30px 0;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-caption {
-    font-size: 24px;
-    font-weight: bold;
-    color: #2d3e50;
-    margin-bottom: 10px;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Table Header */
-th {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 18px;
-}
-
-/* Table Rows */
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-tr:hover {
-    background-color: #e2f7e1;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Styling for Home and Contact Sections */
-section {
-    padding: 20px;
-    margin: 0 15px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-/* Home Section */
-#home {
-    text-align: center;
-}
-
-#home p {
-    font-size: 18px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
-    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
 }
 
-/* Contact Section */
-#contact {
+/* Page Heading */
+h1 {
+    font-size: 36px; /* Font size for h1 */
     text-align: center;
-    font-size: 18px;
+    margin-bottom: 20px;
 }
 
-/* Footer Styling */
-footer {
-    text-align: center;
+/* Form Container */
+form {
+    background-color: white;
+    max-width: 800px;
+    margin: 0 auto; /* Center the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Fieldset and Legend */
+fieldset {
+    border: 2px solid #ddd;
+    border-radius: 5px;
     padding: 15px;
-    background-color: #333;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007BFF;
+    padding: 0 10px;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+input[type="radio"],
+input[type="checkbox"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin: 10px 0 20px 0; /* Margin between inputs */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto; /* Adjust size for radio and checkbox */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Submit and Reset Buttons */
+input[type="submit"],
+input[type="reset"] {
+    background-color: #28a745;
     color: white;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    margin-top: 30px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%;
+    margin-right: 4%;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #218838;
+}
+
+input[type="reset"]:hover {
+    background-color: #dc3545;
+}
+
+/* Button active state */
+input[type="submit"]:active,
+input[type="reset"]:active {
+    background-color: #1e7e34;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    form {
+        width: 90%; /* Form takes 90% of screen width on small devices */
+        padding: 15px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        width: 100%; /* Full width for buttons on mobile */
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }
