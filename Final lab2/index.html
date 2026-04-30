@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Info</title>
+    <style>
+        body { font-family: Arial; margin: 30px; }
+        button { padding: 10px 15px; }
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Information</h2>
+<button onclick="getStudents()">Load Students</button>
+
+<div id="result"></div>
+
+<script>
+function getStudents() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "students.php", true);
+
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            var data = JSON.parse(xhr.responseText);
+            var output = "";
+
+            for (var i = 0; i < data.length; i++) {
+                output += "<div class='card'>" +
+                          "<b>Name:</b> " + data[i].name + "<br>" +
+                          "<b>ID:</b> " + data[i].id + "<br>" +
+                          "<b>Department:</b> " + data[i].department + "<br>" +
+                          "<b>CGPA:</b> " + data[i].cgpa +
+                          "</div>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    };
+
+    xhr.send();
+}
+</script>
+
+</body>
+</html>
